@@ -47,14 +47,10 @@ public class Main {
             service.addBookToLibrary(belkniga, book2);
             service.addBookToLibrary(belkniga, book3);
             
-            printer.printFoundBooks(service.fetchBooksPublishedAfter(belkniga, 2018));
-            
-        } catch (ValidationException e) {
-            
-            printer.printInvalidInputMessage();
-            
-        } catch (FailedToAddBookServiceException e) {
-            
+            printer.printFoundBooks(service.fetchBooksPublishedAfter(belkniga, 2018));  
+        } catch (ValidationException e) {         
+            printer.printInvalidInputMessage();         
+        } catch (FailedToAddBookServiceException e) {        
             printer.printNoBookDataMessage();
         }
     }
