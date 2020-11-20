@@ -23,7 +23,7 @@ public class Book implements Serializable {
     public Book() {}
 
     public Book(String title, Author[] authors, Publisher publisher, int year, int pagesNum, BigDecimal price,
-            Cover cover) throws ValidationException {
+                Cover cover) throws ValidationException {
 
         if (!(title.isBlank() || authors.length == 0 || publisher.getName() == null || publisher.getCountry() == null
                 || year < 1 || year > Calendar.getInstance().get(Calendar.YEAR) || pagesNum < 1)
@@ -36,9 +36,7 @@ public class Book implements Serializable {
             this.pagesNum = pagesNum;
             this.price = price;
             this.cover = cover;
-
         } else {
-
             throw new ValidationException("invalid title, author, publisher, year," + "pagesNum or price");
         }
     }
