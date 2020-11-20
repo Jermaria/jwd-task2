@@ -24,7 +24,7 @@ public class Author implements Serializable {
 
     public String getName() {
         return name;
-	}
+    }
 
     public void setName(String name) throws ValidationException {   
         if (!name.isBlank()) {
@@ -32,7 +32,7 @@ public class Author implements Serializable {
         } else { 
             throw new ValidationException("invalid name input");
         }
-	}
+    }
 
     public String getSurname() {
         return surname;
