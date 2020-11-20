@@ -85,8 +85,7 @@ public class Book implements Serializable {
         } else {
             throw new ValidationException("lack publisher data: name or country");
         }
-
-    }
+  }
 
     public int getYear() {
         return year;
