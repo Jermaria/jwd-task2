@@ -14,14 +14,10 @@ public class Publisher implements Serializable {
     public Publisher() {}
 
     public Publisher(String name, String country) throws ValidationException {
-
         if (!name.isBlank() && !country.isBlank()) {
-
             this.name = name;
             this.country = country;
-
         } else {
-
             throw new ValidationException("invalid name or country");
         }
     }
@@ -31,13 +27,9 @@ public class Publisher implements Serializable {
     }
 
     public void setName(String name) throws ValidationException {
-
         if (!name.isBlank()) {
-
             this.name = name;
-
         } else {
-
             throw new ValidationException("invalid name");
         }
     }
@@ -47,13 +39,9 @@ public class Publisher implements Serializable {
     }
 
     public void setCountry(String country) throws ValidationException {
-
         if (!country.isBlank()) {
-
             this.country = country;
-
         } else {
-
             throw new ValidationException("invalid country");
         }
     }
@@ -104,5 +92,4 @@ public class Publisher implements Serializable {
         builder.append("]");
         return builder.toString();
     }
-
 }
